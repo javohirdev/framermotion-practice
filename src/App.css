@@ -1,0 +1,69 @@
+body{
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    height: 100vh;
+    animation: gradientAnim 15s ease infinite;
+    background-size: 400% 400%;
+}
+
+@keyframes gradientAnim {
+    0% {
+        background-position: 0% 50%;
+    } 50% {
+        background-position: 100% 50%;
+    } 100% {
+        background-position: 0% 50%;
+    }
+}
+
+main{
+    display: flex;
+}
+aside{
+    background-image: linear-gradient(45deg, #DBE6F6, #C5796D);
+    width: 18.75rem;
+    height: 100vh;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+.container{
+    margin: 8.5rem 2rem;
+}
+.container a{
+    color: #F9FAFB;
+    text-decoration: none;
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin: 20px;
+    font-family: system-ui;
+    display: block;
+}
+.toggleButton{
+    position: fixed;
+    cursor: pointer;
+    margin: 1.25rem;
+    border: none;
+    padding: 0.5rem 1rem;
+    background-color: #F9FAFB;
+}
+
+/** DRAG CARDS **/
+
+.dragCard .drag-area{
+    opacity: 0.2;
+    background: #fff;
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top: calc(50% - 150px);
+    left: calc(50% - 150px);
+    border-radius: 30px;
+}
+.dragCard div{
+    background: #fff;
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: calc(50% - 150px / 2);
+    left: calc(50% - 150px / 2);
+    border-radius: 30px;
+    cursor: pointer;
+}
